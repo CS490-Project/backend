@@ -4,8 +4,12 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+$dbhost = NULL;
+$dbname = NULL;
+$dbpass = NULL;
+$dbuser = NULL;
 function getDB(){
-    global $db;
+    global $db, $dbhost, $dbname, $dbpass, $dbuser;
     //this function returns an existing connection or creates a new one if needed
     if(!isset($db)) {
         try{

@@ -15,4 +15,6 @@
         ]);
     
         $results = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        echo $results;
     }
