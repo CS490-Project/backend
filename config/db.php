@@ -8,6 +8,7 @@ $dbhost = NULL;
 $dbname = NULL;
 $dbpass = NULL;
 $dbuser = NULL;
+
 function getDB(){
     global $db, $dbhost, $dbname, $dbpass, $dbuser;
     //this function returns an existing connection or creates a new one if needed
