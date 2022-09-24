@@ -16,5 +16,13 @@
     
         $results = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        echo json_encode($results);
+        $json_res = json_encode($results);
+
+        if($json_res){
+            echo json_encode($results);
+        } else{
+            http_response_code(404);
+            echo "User not found"
+        }
+        
     }
