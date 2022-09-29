@@ -14,8 +14,9 @@ function getDB(){
     //this function returns an existing connection or creates a new one if needed
     if(!isset($db)) {
         try{
-            //pull in our credentials
-            require_once(__DIR__. "/env.php");
+            // pull in db credentials from configuration file 
+            // config file Includes UCID and db password so it's not uploaded neither to github or to canvas for security reasons
+            require_once(__DIR__. "/conf.php");
             $connection_string = "mysql:host=$dbhost;dbname=$dbname;charset=utf8mb4";
             //using the PDO connector create a new connect to the DB
             //if no error occurs we're connected
