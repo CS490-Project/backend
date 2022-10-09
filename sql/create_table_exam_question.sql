@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS  `cs490_exam_questions`
+(
+    id INT AUTO_INCREMENT,
+    value INT,
+    question_id INT,
+    exam_id INT,
+    PRIMARY KEY (id),
+    FOREIGN KEY (question_id) REFERENCES cs490_questions(id),
+    FOREIGN KEY (exam_id) REFERENCES cs490_exams(id)
+);
