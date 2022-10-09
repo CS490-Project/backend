@@ -1,21 +1,18 @@
 <?php require_once(__DIR__ . "/../config/db.php"); ?>
 <?php
 
-    $userId = NULL;
-
-    if (isset($_POST['ucid'])){
+    if (isset($_POST['user_id'])){
 
 
         $db = getDB();
 
-        $stmt = $db->prepare('SELECT * FROM cs490_users WHERE ucid=:ucid');
+        $stmt = $db->prepare('SELECT * FROM cs490_users WHERE id=:user_id');
         $stmt->execute([
-            ":ucid" => $_POST['ucid']
+            ":user_id" => $_POST['user_id']
         ]);
     
         $results = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        
 
         if($results){
             echo json_encode($results);

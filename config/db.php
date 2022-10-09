@@ -15,7 +15,7 @@ function getDB(){
     if(!isset($db)) {
         try{
             // pull in db credentials from configuration file 
-            // config file Includes UCID and db password so it's not uploaded neither to github or to canvas for security reasons
+            // config file Includes UCID and db password so I don't upload it neither to github nor to canvas for security reasons
             require_once(__DIR__. "/conf.php");
             $connection_string = "mysql:host=$dbhost;dbname=$dbname;charset=utf8mb4";
             //using the PDO connector create a new connect to the DB
