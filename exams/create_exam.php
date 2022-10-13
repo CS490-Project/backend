@@ -7,10 +7,10 @@
 
         $data = json_decode($json, true);
         $db = getDB();
-        $db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
 
-        $stmt = $db->prepare('INSERT INTO cs490_exams (total, teacher_id) VALUES(:total, :t_id)');
+        $stmt = $db->prepare('INSERT INTO cs490_exams (title, total, teacher_id) VALUES(:title, :total, :t_id)');
         $r = $stmt->execute([
+            ":title" => $data['title'],
             ":total" => $data['total'],
             ":t_id" => $data['teacher_id']
         ]);

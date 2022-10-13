@@ -3,8 +3,8 @@
 
     $json = file_get_contents('php://input');
     $data = json_decode($json, true);
-    
-    if ($data["exam_id"]){
+  
+    if ($data['exam_id']){
 
         $db = getDB();
     
