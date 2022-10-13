@@ -6,4 +6,5 @@ CREATE TABLE IF NOT EXISTS `cs490_test_cases`
     question_id INT,
     PRIMARY KEY (id),
     FOREIGN KEY (question_id) REFERENCES cs490_questions(id)
+    ON DELETE CASCADE
 );

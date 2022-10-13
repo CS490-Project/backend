@@ -8,4 +8,5 @@ CREATE TABLE IF NOT EXISTS  `cs490_questions`
     teacher_id VARCHAR(30),
     PRIMARY KEY (id),
     FOREIGN KEY (teacher_id) REFERENCES cs490_users(id)
+    ON DELETE CASCADE
 );
