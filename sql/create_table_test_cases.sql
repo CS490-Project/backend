@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS `cs490_test_cases`
 (
-    id INT AUTO_INCREMENT,
+    id INT AUTO_INCREMENT UNIQUE,
     test_in TEXT,
     test_out TEXT,
     question_id INT,

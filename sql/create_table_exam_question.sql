@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS  `cs490_exam_questions`
 (
-    id INT AUTO_INCREMENT,
+    id INT AUTO_INCREMENT UNIQUE,
     value INT,
     question_id INT,
     exam_id INT,
