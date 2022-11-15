@@ -1,5 +1,3 @@
-
-
 <?php
 #turn error reporting on
 ini_set('display_errors',1);
@@ -84,3 +82,4 @@ catch(Exception $e){
     echo $e->getMessage();
     exit("Something went wrong");
 }
+?>

@@ -23,7 +23,7 @@
             echo json_encode($r);
         } else{
             http_response_code(404);
-            echo "Questions for not found for this teacher";
+            echo json_encode(array());
             die();
         }
        

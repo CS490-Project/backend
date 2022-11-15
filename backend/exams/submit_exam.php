@@ -20,23 +20,12 @@
             ":e_id" => $exam_id,
         ]);
 
-     
-        
-
         if($r){
 
             //Loop through answers and create student answer
        
             $answers = $data['answers'];
             
-
-            /*
-                answer TEXT,
-                student_id VARCHAR(30),
-                question_id INT,
-                exam_id INT,
-            */
-
             foreach ($answers as $a) {
                 $stmt = $db->prepare('INSERT INTO cs490_student_answers (answer, student_id, question_id, exam_id) VALUES(:ans, :st_id, :q_id, :e_id)');
                 $r = $stmt->execute([
