@@ -9,10 +9,11 @@
         $db = getDB();
         
 
-        $stmt = $db->prepare('INSERT INTO cs490_questions (description, difficulty, fname, category, teacher_id) VALUES(:desc, :diff, :fn, :cat, :t_id)');
+        $stmt = $db->prepare('INSERT INTO cs490_questions (description, difficulty, constraints, fname, category, teacher_id) VALUES(:desc, :diff, :cons, :fn, :cat, :t_id)');
         $r = $stmt->execute([
             ":desc" => $data['description'],
             ":diff" => $data['difficulty'],
+            ":cons" => $data['constraints'] == "" ? null : $data['constraints'],
             ":fn" => $data['fname'],
             ":cat" => $data['category'],
             ":t_id" => $data['teacher_id']
